@@ -12,14 +12,14 @@
 
 path=$(pwd)
 
-if [ ! -d .git ]; then
-        echo -e " git not exist \n\n.. "
-        echo "Creating git Repository in path: $path"
-        git init
-fi
+#if [ ! -d .git ]; then
+#        echo -e " git not exist \n\n.. "
+#        echo "Creating git Repository in path: $path"
+#        git init
+#fi
 
 
-git add .
+sudo git add .
 
 echo -e "\n"
 echo -n "please add commit message-->"
@@ -27,7 +27,7 @@ echo -n "please add commit message-->"
 
 read varName
 
-git commit -m "$varName"
+sudo git commit -m "$varName"
 
-git push -u origin master
+sudo git push -u origin master
 
